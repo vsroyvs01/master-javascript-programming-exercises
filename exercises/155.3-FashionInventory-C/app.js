@@ -19,7 +19,18 @@ let currentInventory = [
 
 function renderInventory(shoeList) {
     // your code here
-    
+    let array = [];
+    shoeList.forEach(object => {
+      object.shoes.forEach(element => {
+        let buscar = element.name.split(" ");
+        buscar.forEach(item => {
+          if (item === "black") {
+            array.push([object.name, element.name, element.price])
+          }
+        });
+      });
+    });
+    return array;
 }
 
 console.log(renderInventory(currentInventory));
