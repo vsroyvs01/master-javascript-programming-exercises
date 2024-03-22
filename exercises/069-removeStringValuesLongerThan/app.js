@@ -1,6 +1,12 @@
-function removeStringValuesLongerThan(num, obj) {
+function removeStringValuesLongerThan(num, object) {
   // your code here
-  
+  for (const key in object) {
+    if (typeof object[key] === 'string' && object[key].length > num) {
+      delete object[key];
+
+    }
+  }
+  return object;
 }
 
 let obj = {

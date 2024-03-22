@@ -1,6 +1,13 @@
 function computeProductOfAllElements(arr) {
   // your code here
-  
+  if (arr.length == 0) {
+    return 0;
+  }
+  let product = 1;
+  arr.forEach(element => {
+    product *= element;
+  });
+  return product;
 }
 
 let output = computeProductOfAllElements([2, 5, 6]);

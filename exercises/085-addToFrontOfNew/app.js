@@ -1,6 +1,12 @@
 function addToFrontOfNew(arr, element) {
     // your code here
-    
+    let oldArray = [];
+    arr.forEach(element => {
+        oldArray.push(element)
+    });
+    oldArray.unshift(element)
+    let newArray = oldArray
+    return oldArray;
 }
 
 let input = [1, 2];

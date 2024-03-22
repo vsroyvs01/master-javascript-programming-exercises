@@ -1,6 +1,12 @@
-function removeStringValues(obj) {
+function removeStringValues(object) {
     // your code here
+    for (const key in object) {
+        if (typeof object[key] === 'string') {
+          delete object[key];
     
+        }
+      }
+    return object;
 }
 
 let obj = {

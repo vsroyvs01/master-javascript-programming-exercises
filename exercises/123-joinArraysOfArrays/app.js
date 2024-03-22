@@ -1,6 +1,12 @@
 function joinArrayOfArrays(arr) {
   // your code here
-  
+  let result = [];
+  arr.forEach(subArray => {
+      subArray.forEach(element => {
+          result.push(element);
+      });
+  });
+  return result;
 }
 
 let output = joinArrayOfArrays([

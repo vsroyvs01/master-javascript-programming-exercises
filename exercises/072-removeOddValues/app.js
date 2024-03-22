@@ -1,6 +1,12 @@
-function removeOddValues(obj) {
+function removeOddValues(object) {
     // your code here
-
+    for (const key in object) {
+      if (typeof object[key] === 'number' && object[key] % 2 == 1) {
+        delete object[key];
+  
+      }
+    }
+    return object;
 }
 
 let obj = {
